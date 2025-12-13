@@ -328,6 +328,28 @@ function setLanguage(lang) {
         ja: 'モクラック江南ヘッドスパ - 江南の プレミアム頭皮ケア専門。脱毛管理、頭皮スケーリング、オーダーメイドヘッドスパサービス'
     };
     document.querySelector('meta[name="description"]').setAttribute('content', descriptions[lang]);
+    
+    // Update Google Maps language
+    updateGoogleMapLanguage(lang);
+}
+
+function updateGoogleMapLanguage(lang) {
+    const mapIframe = document.getElementById('google-map');
+    if (mapIframe) {
+        // Base Google Maps embed URL for 520 Gangnam-daero
+        const baseUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0799547654893!2d127.02531207631858!3d37.49899207204534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15b1d89b8e5%3A0x7e0c6e8d8d8d8d8d!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDqsJXrgqjrjIDroZwgNTIw!5e0!3m2!1s';
+        
+        // Language codes for Google Maps
+        const langCodes = {
+            ko: 'ko',
+            en: 'en',
+            ja: 'ja'
+        };
+        
+        // Update iframe src with language parameter
+        const newSrc = baseUrl + langCodes[lang] + '!2skr!4v' + Date.now() + '!5m2!1s' + langCodes[lang] + '!2skr';
+        mapIframe.src = newSrc;
+    }
 }
 
 function updateActiveLangButton(lang) {
