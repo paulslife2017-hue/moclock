@@ -1967,3 +1967,15 @@ section {
         padding: 1rem 0.5rem;
     }
 }
+
+/* TikTok Embed Specific Styles */
+.tiktok-container .tiktok-embed {
+    margin: 0 auto;
+    background: transparent;
+}
+
+.tiktok-container blockquote.tiktok-embed {
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+}
