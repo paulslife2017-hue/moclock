@@ -1824,17 +1824,18 @@ section {
     font-size: 1.5rem;
 }
 
-.phone-btn {
-    background: #FFD700;
-    color: #333;
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
 }
 
-.phone-btn:hover {
-    background: #FFA500;
+.instagram-btn:hover {
+    background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
+    transform: scale(1.15);
 }
 
-.phone-btn i {
-    font-size: 1.3rem;
+.instagram-btn i {
+    font-size: 1.5rem;
 }
 
 .mobile-bottom-nav {
@@ -1860,8 +1861,8 @@ section {
         font-size: 1.4rem;
     }
     
-    .phone-btn i {
-        font-size: 1.2rem;
+    .instagram-btn i {
+        font-size: 1.4rem;
     }
     
     .mobile-bottom-nav {
