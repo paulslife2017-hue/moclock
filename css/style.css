@@ -1909,33 +1909,33 @@ section {
 }
 
 /* ================================
-   TikTok Video Section
+   Video Section
    ================================ */
-.tiktok-video-section {
+.video-section {
     margin-top: 4rem;
     padding: 3rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
     border-radius: 20px;
 }
 
-.tiktok-video-section .section-header {
+.video-section .section-header {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.tiktok-title {
+.video-title {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
-.tiktok-subtitle {
+.video-subtitle {
     font-size: 1rem;
     color: var(--text-secondary);
 }
 
-.tiktok-container {
+.video-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1949,32 +1949,32 @@ section {
 }
 
 @media (max-width: 768px) {
-    .tiktok-video-section {
+    .video-section {
         margin-top: 2rem;
         padding: 2rem 0;
         border-radius: 15px;
     }
     
-    .tiktok-title {
+    .video-title {
         font-size: 1.5rem;
     }
     
-    .tiktok-subtitle {
+    .video-subtitle {
         font-size: 0.9rem;
     }
     
-    .tiktok-container {
+    .video-container {
         padding: 1rem 0.5rem;
     }
 }
 
 /* TikTok Embed Specific Styles */
-.tiktok-container .tiktok-embed {
+.video-container .tiktok-embed {
     margin: 0 auto;
     background: transparent;
 }
 
-.tiktok-container blockquote.tiktok-embed {
+.video-container blockquote.tiktok-embed {
     border: none;
     padding: 0;
     margin: 0 auto;
