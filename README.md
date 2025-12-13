@@ -1,5 +1,7 @@
 # MOCLOCK - 강남 프리미엄 헤드스파 & 두피 케어 웹사이트
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpaulslife2017-hue%2Fmoclock)
+
 ## 📋 프로젝트 개요
 
 **모클락(Moclock)**은 강남구 소재 프리미엄 두피 케어 및 헤드스파 서비스를 제공하는 브랜드의 공식 다국어 웹사이트입니다.
@@ -265,16 +267,31 @@ moclock-website/
 
 ## 🌐 배포 방법
 
-### 방법 1: Publish 탭 사용 (권장)
-1. 프로젝트의 **Publish 탭**으로 이동
-2. 원클릭 배포 버튼 클릭
-3. 자동으로 라이브 URL 생성
+### 방법 1: Vercel 원클릭 배포 (가장 쉬움) ⚡
 
-### 방법 2: 수동 배포
+위의 **"Deploy with Vercel"** 버튼을 클릭하거나 아래 단계를 따라하세요:
+
+1. **Vercel 접속**: https://vercel.com
+2. **GitHub로 로그인**
+3. **"Add New..." → "Project"** 클릭
+4. **이 저장소 선택**: `paulslife2017-hue/moclock`
+5. **"Deploy"** 버튼 클릭
+6. **30초 후 배포 완료!** 🎉
+
+배포 URL 예시: `https://moclock.vercel.app`
+
+### 방법 2: 수동 배포 (다른 플랫폼)
 - **GitHub Pages**: 무료 호스팅
 - **Netlify**: 자동 배포, CDN
-- **Vercel**: 빠른 배포
+- **Cloudflare Pages**: 빠른 글로벌 CDN
 - **AWS S3**: 확장성
+
+### 배포 후 해야 할 일
+- [ ] Google Search Console 등록
+- [ ] Naver 웹마스터 도구 등록  
+- [ ] 커스텀 도메인 연결 (선택사항)
+- [ ] SSL 인증서 확인 (자동 발급)
+- [ ] 웹사이트 기능 테스트
 
 ## 📞 실제 연락 정보
 
