@@ -8,6 +8,7 @@ const translations = {
         nav_reviews: '고객 후기',
         nav_benefits: '혜택',
         nav_contact: '문의하기',
+        nav_location: '찾아오는 길',
         
         // Hero Section
         hero_subtitle: 'Premium Head Spa',
@@ -111,6 +112,19 @@ const translations = {
         gallery_tag: 'GALLERY',
         gallery_title: '모클락 갤러리',
         gallery_desc: '프리미엄 시설과 전문적인 케어 과정을 확인하세요',
+        
+        // Location Section
+        location_tag: 'LOCATION',
+        location_title: '찾아오는 길',
+        location_desc: '프리미엄 두피 케어, 모클락에서 경험하세요',
+        location_address_title: '주소',
+        location_address: '서울시 강남구 강남대로 520<br>할리스커피 건물 2층',
+        location_phone_title: '전화 문의',
+        location_phone_hours: '평일 10:00 - 20:00<br>주말 10:00 - 18:00',
+        location_transport_title: '대중교통',
+        location_transport_info: '지하철 2호선 강남역 11번 출구<br>도보 5분 거리',
+        location_parking_title: '주차 안내',
+        location_parking_info: '건물 내 주차장 이용 가능<br>2시간 무료 주차',
         gallery_img1: '프리미엄 리셉션',
         gallery_img2: '전문 상담',
         gallery_img3: '모클락 입구',
@@ -139,6 +153,7 @@ const translations = {
         nav_reviews: 'Reviews',
         nav_benefits: 'Benefits',
         nav_contact: 'Contact',
+        nav_location: 'Location',
         
         // Hero Section
         hero_subtitle: 'Premium Head Spa',
@@ -249,6 +264,19 @@ const translations = {
         gallery_img5: 'Premium Products',
         gallery_img6: 'Modern Facilities',
         
+        // Location Section
+        location_tag: 'LOCATION',
+        location_title: 'How to Get Here',
+        location_desc: 'Experience premium scalp care at Moclock',
+        location_address_title: 'Address',
+        location_address: '520 Gangnam-daero, Gangnam-gu, Seoul<br>2F, Hollys Coffee Building',
+        location_phone_title: 'Contact',
+        location_phone_hours: 'Mon-Fri 10:00 - 20:00<br>Sat-Sun 10:00 - 18:00',
+        location_transport_title: 'Public Transport',
+        location_transport_info: 'Gangnam Station (Line 2) Exit 11<br>5 minutes walk',
+        location_parking_title: 'Parking',
+        location_parking_info: 'Building parking available<br>2 hours free parking',
+        
         // SEO Content
         seo_content_text: 'As a professional <strong>Gangnam head spa</strong> brand, we provide the best scalp care services in the Gangnam-gu area. We are a leader in the Gangnam head spa field, specializing in hair loss prevention and scalp health management.',
         
@@ -267,6 +295,7 @@ const translations = {
         nav_reviews: 'お客様の声',
         nav_benefits: '特典',
         nav_contact: 'お問い合わせ',
+        nav_location: 'アクセス',
         
         // Hero Section
         hero_subtitle: 'Premium Head Spa',
@@ -376,6 +405,19 @@ const translations = {
         gallery_img4: 'プライベートケアルーム',
         gallery_img5: 'プレミアム製品',
         gallery_img6: '最新施設',
+        
+        // Location Section
+        location_tag: 'LOCATION',
+        location_title: 'アクセス',
+        location_desc: 'プレミアム頭皮ケア、モクラックでご体験ください',
+        location_address_title: '住所',
+        location_address: 'ソウル市江南区江南大路520<br>ハリスコーヒービル2階',
+        location_phone_title: 'お問い合わせ',
+        location_phone_hours: '平日 10:00 - 20:00<br>週末 10:00 - 18:00',
+        location_transport_title: '交通アクセス',
+        location_transport_info: '地下鉄2号線江南駅11番出口<br>徒歩5分',
+        location_parking_title: '駐車案内',
+        location_parking_info: 'ビル内駐車場利用可能<br>2時間無料駐車',
         
         // SEO Content
         seo_content_text: '<strong>江南ヘッドスパ</strong>専門ブランドとして、江南区地域最高の頭皮ケアサービスを提供します。Gangnam head spa分野のリーダーとして、脱毛予防と頭皮健康管理に特化しています。',
