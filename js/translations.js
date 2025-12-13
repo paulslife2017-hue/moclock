@@ -125,6 +125,7 @@ const translations = {
         location_transport_info: '지하철 2호선 강남역 11번 출구<br>도보 5분 거리',
         location_parking_title: '주차 안내',
         location_parking_info: '건물 내 주차장 이용 가능<br>2시간 무료 주차',
+        location_map_title: '모클락 강남헤드스파 위치',
         gallery_img1: '프리미엄 리셉션',
         gallery_img2: '전문 상담',
         gallery_img3: '모클락 입구',
@@ -276,6 +277,7 @@ const translations = {
         location_transport_info: 'Gangnam Station (Line 2) Exit 11<br>5 minutes walk',
         location_parking_title: 'Parking',
         location_parking_info: 'Building parking available<br>2 hours free parking',
+        location_map_title: 'Moclock Gangnam Head Spa Location',
         
         // SEO Content
         seo_content_text: 'As a professional <strong>Gangnam head spa</strong> brand, we provide the best scalp care services in the Gangnam-gu area. We are a leader in the Gangnam head spa field, specializing in hair loss prevention and scalp health management.',
@@ -418,6 +420,7 @@ const translations = {
         location_transport_info: '地下鉄2号線江南駅11番出口<br>徒歩5分',
         location_parking_title: '駐車案内',
         location_parking_info: 'ビル内駐車場利用可能<br>2時間無料駐車',
+        location_map_title: 'モクラック江南ヘッドスパ所在地',
         
         // SEO Content
         seo_content_text: '<strong>江南ヘッドスパ</strong>専門ブランドとして、江南区地域最高の頭皮ケアサービスを提供します。Gangnam head spa分野のリーダーとして、脱毛予防と頭皮健康管理に特化しています。',

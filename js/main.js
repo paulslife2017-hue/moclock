@@ -298,7 +298,15 @@ function setLanguage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
+            // Check if this element has translate-attr attribute for attribute translation
+            const attrName = element.getAttribute('data-translate-attr');
+            if (attrName) {
+                // Translate attribute (e.g., title, alt, placeholder)
+                element.setAttribute(attrName, translations[lang][key]);
+            } else {
+                // Translate innerHTML
+                element.innerHTML = translations[lang][key];
+            }
         }
     });
     
