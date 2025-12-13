@@ -1,47 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     
     <!-- Main Page - Korean -->
     <url>
-        <loc>https://moclock.com/</loc>
-        <lastmod>2024-12-13</lastmod>
+        <loc>https://moclock.vercel.app/</loc>
+        <lastmod>2025-12-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://moclock.com/?lang=ko"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://moclock.com/?lang=en"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://moclock.com/?lang=ja"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://moclock.vercel.app/?lang=ko"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://moclock.vercel.app/?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://moclock.vercel.app/?lang=ja"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://moclock.vercel.app/"/>
+        <image:image>
+            <image:loc>https://moclock.vercel.app/images/reception.jpg</image:loc>
+            <image:title>모클락 강남헤드스파 리셉션</image:title>
+            <image:caption>강남역 도보 1분, 프리미엄 헤드스파 모클락</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://moclock.vercel.app/images/salon.jpg</image:loc>
+            <image:title>프리미엄 살롱 공간</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://moclock.vercel.app/images/treatment.jpg</image:loc>
+            <image:title>두피 트리트먼트 서비스</image:title>
+        </image:image>
     </url>
     
     <!-- About Section -->
     <url>
-        <loc>https://moclock.com/#about</loc>
-        <lastmod>2024-12-13</lastmod>
+        <loc>https://moclock.vercel.app/#about</loc>
+        <lastmod>2025-12-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Services Section -->
     <url>
-        <loc>https://moclock.com/#services</loc>
-        <lastmod>2024-12-13</lastmod>
+        <loc>https://moclock.vercel.app/#services</loc>
+        <lastmod>2025-12-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Benefits Section -->
+    <!-- Reviews Section -->
     <url>
-        <loc>https://moclock.com/#benefits</loc>
-        <lastmod>2024-12-13</lastmod>
+        <loc>https://moclock.vercel.app/#reviews</loc>
+        <lastmod>2025-12-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Gallery Section -->
+    <url>
+        <loc>https://moclock.vercel.app/#gallery</loc>
+        <lastmod>2025-12-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Contact Section -->
+    <!-- Location Section -->
     <url>
-        <loc>https://moclock.com/#contact</loc>
-        <lastmod>2024-12-13</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://moclock.vercel.app/#location</loc>
+        <lastmod>2025-12-13</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
