@@ -1907,3 +1907,63 @@ section {
         padding-bottom: 70px;
     }
 }
+
+/* ================================
+   TikTok Video Section
+   ================================ */
+.tiktok-video-section {
+    margin-top: 4rem;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 20px;
+}
+
+.tiktok-video-section .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tiktok-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.tiktok-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.tiktok-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.tiktok-embed {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .tiktok-video-section {
+        margin-top: 2rem;
+        padding: 2rem 0;
+        border-radius: 15px;
+    }
+    
+    .tiktok-title {
+        font-size: 1.5rem;
+    }
+    
+    .tiktok-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .tiktok-container {
+        padding: 1rem 0.5rem;
+    }
+}

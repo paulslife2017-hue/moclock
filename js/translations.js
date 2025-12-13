@@ -46,6 +46,10 @@ const translations = {
         service6_title: '1:1 맞춤 상담',
         service6_desc: '전문 컨설턴트와 함께하는 개인별 두피 관리 계획 수립',
         
+        // TikTok Video Section
+        tiktok_title: '두피 케어 영상',
+        tiktok_subtitle: '모클락의 실제 케어 과정을 확인해보세요',
+        
         // Benefits Section
         benefits_tag: 'WHY MOCLOCK',
         benefits_title: '모클락만의 특별함',
@@ -192,6 +196,10 @@ const translations = {
         service6_title: '1:1 Consultation',
         service6_desc: 'Individual scalp management plan with professional consultants',
         
+        // TikTok Video Section
+        tiktok_title: 'Scalp Care Video',
+        tiktok_subtitle: 'Watch our actual care process',
+        
         // Benefits Section
         benefits_tag: 'WHY MOCLOCK',
         benefits_title: 'What Makes Us Special',
@@ -334,6 +342,10 @@ const translations = {
         service5_desc: '脱毛進行防止と毛髪再生のための専門ケアプログラム',
         service6_title: '1:1オーダーメイド相談',
         service6_desc: '専門コンサルタントと一緒に個人別頭皮管理計画樹立',
+        
+        // TikTok Video Section
+        tiktok_title: '頭皮ケア映像',
+        tiktok_subtitle: '実際のケアプロセスをご覧ください',
         
         // Benefits Section
         benefits_tag: 'WHY MOCLOCK',
