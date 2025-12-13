@@ -1,0 +1,394 @@
+// ===== Multi-language Translation Data =====
+const translations = {
+    ko: {
+        // Navigation
+        nav_home: '홈',
+        nav_about: '브랜드 소개',
+        nav_services: '서비스',
+        nav_reviews: '고객 후기',
+        nav_benefits: '혜택',
+        nav_contact: '문의하기',
+        
+        // Hero Section
+        hero_subtitle: 'Premium Head Spa',
+        hero_title: 'MOCLOCK',
+        hero_description: '두피 건강의 골든 타임을 지키는<br>프리미엄 헤드스파 브랜드',
+        hero_btn_booking: '상담 예약하기',
+        hero_btn_learn: '더 알아보기',
+        
+        // About Section
+        about_tag: 'ABOUT MOCLOCK',
+        about_title: '브랜드 스토리',
+        about_name_title: '모클락(Moclock)의 의미',
+        about_name_origin: '<span class="highlight">\'모(毛)\'</span>와 <span class="highlight">\'clock(시간)\'</span>의 합성어',
+        about_desc1: '치료하지 않고 방치하면 시간이 지날수록 악화되는 탈모에 대한 <strong>시기적절한 관리의 중요성</strong>을 강조합니다.',
+        about_desc2: '프리미엄 두피 케어 브랜드 Moclock은 혁신적이고 차별화된 시스템을 통해 <strong>맞춤형 케어</strong>를 제공하며, 두피 건강을 위한 <strong class="golden-time">\'골든 타임\'</strong>을 지켜드립니다.',
+        about_feature1: '혁신적인 케어 시스템',
+        about_feature2: '개인 맞춤형 솔루션',
+        about_feature3: '프리미엄 서비스',
+        about_image_text: '프리미엄 헤드스파',
+        
+        // Services Section
+        services_tag: 'OUR SERVICES',
+        services_title: '맞춤형 두피 케어 프로그램',
+        services_desc: '개인의 두피 상태를 정밀하게 분석하여 최적화된 케어를 제공합니다',
+        service1_title: '상담',
+        service1_desc: '두피 상태 정밀 진단 및 개인 맞춤형 케어 계획 수립',
+        service2_title: '두피 스케일링',
+        service2_desc: '각질 제거 및 두피 정화 관리',
+        service3_title: '스팀 트리트먼트',
+        service3_desc: '두피 모공을 열어 흡수력 강화',
+        service4_title: '아쿠아 펀치 케어',
+        service4_desc: '수분 공급 및 두피 진정 관리',
+        service5_title: '갈바닉 케어 (미세전류 관리)',
+        service5_desc: '유효 성분 흡수 촉진 및 두피 컨디션 개선',
+        service6_title: '1:1 맞춤 상담',
+        service6_desc: '전문 컨설턴트와 함께하는 개인별 두피 관리 계획 수립',
+        
+        // Benefits Section
+        benefits_tag: 'WHY MOCLOCK',
+        benefits_title: '모클락만의 특별함',
+        benefit1_title: '골든 타임 관리',
+        benefit1_desc: '탈모 진행 전 조기 관리로 두피 건강의 최적 시기를 놓치지 않습니다',
+        benefit2_title: '차별화된 시스템',
+        benefit2_desc: '혁신적인 케어 기술과 프리미엄 제품으로 최상의 결과를 제공합니다',
+        benefit3_title: '개인 맞춤 케어',
+        benefit3_desc: '획일화된 관리가 아닌, 개인의 두피 상태에 최적화된 솔루션을 제공합니다',
+        benefit4_title: '전문가 케어',
+        benefit4_desc: '풍부한 경험과 전문 지식을 갖춘 두피 케어 전문가가 직접 관리합니다',
+        
+        // Process Section
+        process_tag: 'CARE PROCESS',
+        process_title: '케어 진행 과정',
+        process1_title: 'Consultation',
+        process1_desc: '두피 상태 체크 및 맞춤 상담',
+        process2_title: 'Scalp Scaling',
+        process2_desc: '두피 각질 및 노폐물 제거',
+        process3_title: 'Steam Treatment',
+        process3_desc: '스팀으로 모공 열어 영양 흡수',
+        process4_title: 'Aqua Punch',
+        process4_desc: '수분 공급 및 두피 진정',
+        process5_title: 'Galvanic Treatment',
+        process5_desc: '갈바닉으로 영양 침투 및 마무리',
+        
+        // Contact Section
+        contact_tag: 'CONTACT US',
+        contact_title: '상담 문의',
+        contact_desc: '두피 고민, 모클락이 함께 해결해드립니다',
+        contact_phone_title: '전화 상담',
+        contact_phone_hours: '평일 10:00 - 20:00<br>주말 10:00 - 18:00',
+        contact_email_title: '이메일 문의',
+        contact_email_hours: '24시간 접수 가능<br>1영업일 내 답변',
+        contact_location_title: '오시는 길',
+        contact_location_address: '서울시 강남구 강남대로 520<br>할리스커피 건물 2층',
+        contact_map_link: '지도 보기',
+        
+        // Contact Form
+        form_name: '이름',
+        form_phone: '연락처',
+        form_email: '이메일',
+        form_message: '문의 내용',
+        form_submit: '상담 신청하기',
+        form_success: '상담 신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.',
+        
+        // Reviews Section
+        reviews_tag: 'CUSTOMER REVIEWS',
+        reviews_title: '고객 후기',
+        reviews_rating_text: '/ 5.0 기반 1,096개 후기',
+        review1_text: '정말 좋은 경험이었습니다. 매우 아늑하고 깨끗했으며, 모든 직원분들이 친절하고 훌륭했습니다. 영어로 소통이 가능해서 편안하게 시술받을 수 있었어요. 제 두피에 완벽한 케어를 추천해주셨습니다! 다음에 꼭 다시 방문할게요!',
+        review2_text: '최근 모클락에서 두피 케어를 받았는데 정말 훌륭한 경험이었습니다! 클리닉은 매우 깨끗했고, 직원들은 친절하고 전문적이었으며, 각 단계를 자세히 설명해주었습니다.',
+        review3_text: '두피 케어를 받으러 모클락을 방문했는데 정말 만족스러웠습니다! 모든 분들이 너무 친절하시고 외국인 친화적이에요. 제 두피가 괜찮다고 생각했는데, 전후 사진을 보고 깜짝 놀랐습니다.',
+        review4_text: '이 독특한 "헤어 스파"에서 정말 편안한 경험을 했습니다! 먼저 사랑스러운 직원과 두피 스캔으로 상담을 받았고, 그 다음 아름다운 개인실로 안내받아 세심한 케어를 받았습니다.',
+        review5_text: '놀라운 두피 케어 경험이었습니다! 직원분들은 전문적이고 친절했으며, 전체 과정 동안 매우 편안하게 느껴졌습니다. 케어 후 두피가 상쾌하고 깨끗해졌으며, 머리카락의 눈에 띄는 개선을 확인했습니다.',
+        review6_text: '오늘 강남의 모클락 두피 케어 클리닉을 방문했습니다. 한국에 온 후 두피가 가렵고 건조하다고 느꼈는데, 일주일에 세 번 샴푸를 해도 뭔가 이상해서 방문했습니다. 정말 효과적이었어요!',
+        reviews_cta_text: '실제 고객님들의 생생한 후기를 더 보시려면',
+        reviews_google_btn: 'Google 리뷰 보기',
+        reviews_naver_btn: '네이버 리뷰 보기',
+        reviews_live_title: '실시간 Google 리뷰',
+        reviews_view_all: '모든 리뷰 보기 (1,096+)',
+        
+        // Gallery Section
+        gallery_tag: 'GALLERY',
+        gallery_title: '모클락 갤러리',
+        gallery_desc: '프리미엄 시설과 전문적인 케어 과정을 확인하세요',
+        gallery_img1: '프리미엄 리셉션',
+        gallery_img2: '전문 상담',
+        gallery_img3: '모클락 입구',
+        gallery_img4: '두피 정밀 진단',
+        gallery_img5: '두피 분석',
+        gallery_img6: '프라이빗 케어룸',
+        gallery_img7: '두피 스케일링',
+        gallery_img8: '갈바닉 케어',
+        gallery_img9: '아쿠아 펀치',
+        
+        // SEO Content
+        seo_content_text: '<strong>강남 헤드스파</strong> 전문 브랜드로서, 강남구 지역 최고의 두피 케어 서비스를 제공합니다. Gangnam head spa 분야의 선두주자로, 탈모 예방과 두피 건강 관리에 특화되어 있습니다.',
+        
+        // Footer
+        footer_brand_desc: '두피 건강의 골든 타임을 지키는<br>프리미엄 헤드스파 브랜드',
+        footer_links_title: '바로가기',
+        footer_contact_title: '문의하기',
+        footer_copyright: '© 2024 MOCLOCK. All rights reserved.',
+    },
+    
+    en: {
+        // Navigation
+        nav_home: 'Home',
+        nav_about: 'About',
+        nav_services: 'Services',
+        nav_reviews: 'Reviews',
+        nav_benefits: 'Benefits',
+        nav_contact: 'Contact',
+        
+        // Hero Section
+        hero_subtitle: 'Premium Head Spa',
+        hero_title: 'MOCLOCK',
+        hero_description: 'Premium Head Spa Brand<br>Protecting the Golden Time of Scalp Health',
+        hero_btn_booking: 'Book Consultation',
+        hero_btn_learn: 'Learn More',
+        
+        // About Section
+        about_tag: 'ABOUT MOCLOCK',
+        about_title: 'Brand Story',
+        about_name_title: 'The Meaning of Moclock',
+        about_name_origin: 'A combination of <span class="highlight">\'毛 (Mo - Hair)\'</span> and <span class="highlight">\'Clock (Time)\'</span>',
+        about_desc1: 'Emphasizes the importance of <strong>timely management</strong> for hair loss, which worsens over time if left untreated.',
+        about_desc2: 'Premium scalp care brand Moclock provides <strong>personalized care</strong> through an innovative and differentiated system, protecting the <strong class="golden-time">\'Golden Time\'</strong> for scalp health.',
+        about_feature1: 'Innovative Care System',
+        about_feature2: 'Personalized Solutions',
+        about_feature3: 'Premium Service',
+        about_image_text: 'Premium Head Spa',
+        
+        // Services Section
+        services_tag: 'OUR SERVICES',
+        services_title: 'Customized Scalp Care Programs',
+        services_desc: 'We provide optimized care by precisely analyzing individual scalp conditions',
+        service1_title: 'Consultation',
+        service1_desc: 'Precise scalp diagnosis and personalized care plan',
+        service2_title: 'Scalp Scaling',
+        service2_desc: 'Exfoliation and scalp purification treatment',
+        service3_title: 'Steam Treatment',
+        service3_desc: 'Opens scalp pores to enhance absorption',
+        service4_title: 'Aqua Punch Care',
+        service4_desc: 'Hydration and scalp soothing treatment',
+        service5_title: 'Galvanic Care (Microcurrent)',
+        service5_desc: 'Promotes absorption of active ingredients and improves scalp condition',
+        service6_title: '1:1 Consultation',
+        service6_desc: 'Individual scalp management plan with professional consultants',
+        
+        // Benefits Section
+        benefits_tag: 'WHY MOCLOCK',
+        benefits_title: 'What Makes Us Special',
+        benefit1_title: 'Golden Time Management',
+        benefit1_desc: 'Early management before hair loss progression ensures optimal timing for scalp health',
+        benefit2_title: 'Differentiated System',
+        benefit2_desc: 'Innovative care technology and premium products deliver the best results',
+        benefit3_title: 'Personalized Care',
+        benefit3_desc: 'Not standardized management, but solutions optimized for individual scalp conditions',
+        benefit4_title: 'Expert Care',
+        benefit4_desc: 'Directly managed by scalp care experts with extensive experience and knowledge',
+        
+        // Process Section
+        process_tag: 'CARE PROCESS',
+        process_title: 'Care Procedure',
+        process1_title: 'Consultation',
+        process1_desc: 'Scalp condition check and personalized consultation',
+        process2_title: 'Scalp Scaling',
+        process2_desc: 'Remove dead skin cells and impurities',
+        process3_title: 'Steam Treatment',
+        process3_desc: 'Open pores with steam for nutrient absorption',
+        process4_title: 'Aqua Punch',
+        process4_desc: 'Hydration and scalp soothing',
+        process5_title: 'Galvanic Treatment',
+        process5_desc: 'Nutrient penetration with galvanic technology',
+        
+        // Contact Section
+        contact_tag: 'CONTACT US',
+        contact_title: 'Consultation Inquiry',
+        contact_desc: 'Moclock is here to solve your scalp concerns',
+        contact_phone_title: 'Phone Consultation',
+        contact_phone_hours: 'Weekdays 10:00 - 20:00<br>Weekends 10:00 - 18:00',
+        contact_email_title: 'Email Inquiry',
+        contact_email_hours: '24/7 Available<br>Reply within 1 business day',
+        contact_location_title: 'Location',
+        contact_location_address: '2F, Hollys Coffee Building<br>520 Gangnam-daero, Gangnam-gu, Seoul',
+        contact_map_link: 'View Map',
+        
+        // Contact Form
+        form_name: 'Name',
+        form_phone: 'Phone',
+        form_email: 'Email',
+        form_message: 'Message',
+        form_submit: 'Submit Inquiry',
+        form_success: 'Your consultation request has been submitted! We will contact you soon.',
+        
+        // Reviews Section
+        reviews_tag: 'CUSTOMER REVIEWS',
+        reviews_title: 'Customer Reviews',
+        reviews_rating_text: '/ 5.0 based on 1,096 reviews',
+        review1_text: 'I had really a nice treatment here. The place was so cozy and clean, all the staff here are so kind and amazing. They can speak in English so you can feel free while getting the treatment. They recommend the treatment that perfect for my scalp! Definitely going to revisit again next time!',
+        review2_text: 'I recently tried the scalp hair treatment at MOCLOCK and had such a great experience! The clinic was super clean, the staff were friendly and professional, and they really took time to explain each step of the treatment.',
+        review3_text: 'I visited Moclock for a head scalp treatment and I\'m so glad I did! Everyone here was incredibly kind and the staff is very foreign-friendly. I honestly thought my scalp was okay, but after seeing the before and after photos I was shocked.',
+        review4_text: 'A truly relaxing experience at this unique "hair spa"! First, I had a consultation with a lovely staff member with a scan of my scalp. I was then taken to a beautiful private room where they took great care of me.',
+        review5_text: 'I had an amazing scalp treatment experience! The staff was professional, kind, and made me feel very comfortable throughout the entire process. My scalp felt so refreshed and clean afterwards, and I noticed a visible improvement in my hair.',
+        review6_text: 'Today, I visited Moclock Scalp Treatment Clinic in Gangnam. After coming to Korea, I noticed that my scalp felt itchy and dry. Even though I shampoo three times a week, something felt wrong, so I decided to visit. It was really effective!',
+        reviews_cta_text: 'To see more real customer reviews',
+        reviews_google_btn: 'View Google Reviews',
+        reviews_naver_btn: 'View Naver Reviews',
+        reviews_live_title: 'Live Google Reviews',
+        reviews_view_all: 'View All Reviews (1,096+)',
+        
+        // Gallery Section
+        gallery_tag: 'GALLERY',
+        gallery_title: 'Moclock Gallery',
+        gallery_desc: 'Explore our premium facilities and professional care process',
+        gallery_img1: 'Premium Reception',
+        gallery_img2: 'Scalp Analysis',
+        gallery_img3: 'Professional Care Process',
+        gallery_img4: 'Private Care Room',
+        gallery_img5: 'Premium Products',
+        gallery_img6: 'Modern Facilities',
+        
+        // SEO Content
+        seo_content_text: 'As a professional <strong>Gangnam head spa</strong> brand, we provide the best scalp care services in the Gangnam-gu area. We are a leader in the Gangnam head spa field, specializing in hair loss prevention and scalp health management.',
+        
+        // Footer
+        footer_brand_desc: 'Premium Head Spa Brand<br>Protecting the Golden Time of Scalp Health',
+        footer_links_title: 'Quick Links',
+        footer_contact_title: 'Contact',
+        footer_copyright: '© 2024 MOCLOCK. All rights reserved.',
+    },
+    
+    ja: {
+        // Navigation
+        nav_home: 'ホーム',
+        nav_about: 'ブランド紹介',
+        nav_services: 'サービス',
+        nav_reviews: 'お客様の声',
+        nav_benefits: '特典',
+        nav_contact: 'お問い合わせ',
+        
+        // Hero Section
+        hero_subtitle: 'Premium Head Spa',
+        hero_title: 'MOCLOCK',
+        hero_description: '頭皮健康のゴールデンタイムを守る<br>プレミアムヘッドスパブランド',
+        hero_btn_booking: '相談予約',
+        hero_btn_learn: '詳しく見る',
+        
+        // About Section
+        about_tag: 'ABOUT MOCLOCK',
+        about_title: 'ブランドストーリー',
+        about_name_title: 'Moclock（モクラック）の意味',
+        about_name_origin: '<span class="highlight">\'毛（モ）\'</span>と<span class="highlight">\'clock（時間）\'</span>の合成語',
+        about_desc1: '治療せずに放置すると時間が経つにつれて悪化する脱毛に対する<strong>タイムリーな管理の重要性</strong>を強調します。',
+        about_desc2: 'プレミアム頭皮ケアブランドMoclockは、革新的で差別化されたシステムを通じて<strong>オーダーメイドケア</strong>を提供し、頭皮健康のための<strong class="golden-time">\'ゴールデンタイム\'</strong>をお守りします。',
+        about_feature1: '革新的なケアシステム',
+        about_feature2: '個人別オーダーメイドソリューション',
+        about_feature3: 'プレミアムサービス',
+        about_image_text: 'プレミアムヘッドスパ',
+        
+        // Services Section
+        services_tag: 'OUR SERVICES',
+        services_title: 'オーダーメイド頭皮ケアプログラム',
+        services_desc: '個人の頭皮状態を精密に分析し、最適化されたケアを提供します',
+        service1_title: '頭皮精密診断',
+        service1_desc: '最先端機器を活用した頭皮状態分析とオーダーメイドソリューション提供',
+        service2_title: 'ディープクレンジングケア',
+        service2_desc: '毛穴の奥に蓄積された老廃物除去と頭皮浄化プログラム',
+        service3_title: 'プレミアムヘッドスパ',
+        service3_desc: '専門家の手で頭皮血液循環促進とリラックスケア',
+        service4_title: '栄養集中管理',
+        service4_desc: '頭皮と毛根に必須栄養供給で健康な毛髪成長支援',
+        service5_title: '脱毛集中ケア',
+        service5_desc: '脱毛進行防止と毛髪再生のための専門ケアプログラム',
+        service6_title: '1:1オーダーメイド相談',
+        service6_desc: '専門コンサルタントと一緒に個人別頭皮管理計画樹立',
+        
+        // Benefits Section
+        benefits_tag: 'WHY MOCLOCK',
+        benefits_title: 'Moclockだけの特別さ',
+        benefit1_title: 'ゴールデンタイム管理',
+        benefit1_desc: '脱毛進行前の早期管理で頭皮健康の最適時期を逃しません',
+        benefit2_title: '差別化されたシステム',
+        benefit2_desc: '革新的なケア技術とプレミアム製品で最高の結果を提供します',
+        benefit3_title: '個人オーダーメイドケア',
+        benefit3_desc: '画一化された管理ではなく、個人の頭皮状態に最適化されたソリューションを提供します',
+        benefit4_title: '専門家ケア',
+        benefit4_desc: '豊富な経験と専門知識を持つ頭皮ケア専門家が直接管理します',
+        
+        // Process Section
+        process_tag: 'CARE PROCESS',
+        process_title: 'ケア進行過程',
+        process1_title: 'Consultation',
+        process1_desc: '頭皮状態チェックとカスタム相談',
+        process2_title: 'Scalp Scaling',
+        process2_desc: '頭皮角質と老廃物除去',
+        process3_title: 'Steam Treatment',
+        process3_desc: 'スチームで毛穴を開き栄養吸収',
+        process4_title: 'Aqua Punch',
+        process4_desc: '水分供給と頭皮鎮静',
+        process5_title: 'Galvanic Treatment',
+        process5_desc: 'ガルバニックで栄養浸透と仕上げ',
+        
+        // Contact Section
+        contact_tag: 'CONTACT US',
+        contact_title: '相談お問い合わせ',
+        contact_desc: '頭皮のお悩み、Moclockが一緒に解決します',
+        contact_phone_title: '電話相談',
+        contact_phone_hours: '平日 10:00 - 20:00<br>週末 10:00 - 18:00',
+        contact_email_title: 'メールお問い合わせ',
+        contact_email_hours: '24時間受付可能<br>1営業日以内に返信',
+        contact_location_title: 'アクセス',
+        contact_location_address: 'ソウル市江南区江南大路520<br>ハリスコーヒービル2階',
+        contact_map_link: '地図を見る',
+        
+        // Contact Form
+        form_name: 'お名前',
+        form_phone: '連絡先',
+        form_email: 'メール',
+        form_message: 'お問い合わせ内容',
+        form_submit: '相談申し込み',
+        form_success: '相談申し込みが完了しました！近日中にご連絡いたします。',
+        
+        // Reviews Section
+        reviews_tag: 'CUSTOMER REVIEWS',
+        reviews_title: 'お客様の声',
+        reviews_rating_text: '/ 5.0 1,096件のレビューに基づく',
+        review1_text: 'ここで本当に素晴らしいトリートメントを受けました。とても居心地が良く清潔で、スタッフの皆さんがとても親切で素晴らしかったです。英語で話せるので、トリートメントを受けながら安心できました。私の頭皮に完璧なトリートメントを勧めてくれました！次回も必ず再訪します！',
+        review2_text: '最近MOCLOCKで頭皮ヘアトリートメントを試したところ、素晴らしい体験でした！クリニックは非常に清潔で、スタッフはフレンドリーでプロフェッショナルで、トリートメントの各ステップを丁寧に説明してくれました。',
+        review3_text: 'ヘッド頭皮トリートメントのためにMoclockを訪れ、本当に良かったです！ここの皆さんは信じられないほど親切で、スタッフは外国人にとてもフレンドリーです。私は頭皮が大丈夫だと思っていましたが、ビフォーアフターの写真を見てショックを受けました。',
+        review4_text: 'このユニークな「ヘアスパ」で本当にリラックスした体験をしました！まず、素敵なスタッフと頭皮スキャンで相談を受け、その後美しいプライベートルームに案内され、丁寧なケアを受けました。',
+        review5_text: '素晴らしい頭皮トリートメント体験でした！スタッフはプロフェッショナルで親切で、プロセス全体を通して非常に快適に感じさせてくれました。トリートメント後、頭皮がとても爽快で清潔になり、髪の毛の目に見える改善を確認しました。',
+        review6_text: '今日、江南のMoclock頭皮トリートメントクリニックを訪れました。韓国に来てから、頭皮がかゆくて乾燥していると感じました。週に3回シャンプーをしても何かおかしいと感じたので訪問しました。本当に効果的でした！',
+        reviews_cta_text: '実際のお客様のレビューをもっと見る',
+        reviews_google_btn: 'Googleレビューを見る',
+        reviews_naver_btn: 'Naverレビューを見る',
+        reviews_live_title: 'リアルタイムGoogleレビュー',
+        reviews_view_all: 'すべてのレビューを見る (1,096+)',
+        
+        // Gallery Section
+        gallery_tag: 'GALLERY',
+        gallery_title: 'モクラックギャラリー',
+        gallery_desc: 'プレミアム施設と専門的なケアプロセスをご確認ください',
+        gallery_img1: 'プレミアムレセプション',
+        gallery_img2: '頭皮精密診断',
+        gallery_img3: '専門ケアプロセス',
+        gallery_img4: 'プライベートケアルーム',
+        gallery_img5: 'プレミアム製品',
+        gallery_img6: '最新施設',
+        
+        // SEO Content
+        seo_content_text: '<strong>江南ヘッドスパ</strong>専門ブランドとして、江南区地域最高の頭皮ケアサービスを提供します。Gangnam head spa分野のリーダーとして、脱毛予防と頭皮健康管理に特化しています。',
+        
+        // Footer
+        footer_brand_desc: '頭皮健康のゴールデンタイムを守る<br>プレミアムヘッドスパブランド',
+        footer_links_title: 'クイックリンク',
+        footer_contact_title: 'お問い合わせ',
+        footer_copyright: '© 2024 MOCLOCK. All rights reserved.',
+    }
+};
+
+// Export for use in main.js
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = translations;
+}
