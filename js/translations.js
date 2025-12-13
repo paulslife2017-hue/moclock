@@ -8,6 +8,7 @@ const translations = {
         nav_reviews: '고객 후기',
         nav_benefits: '혜택',
         nav_contact: '문의하기',
+        nav_pricing: '가격',
         nav_location: '찾아오는 길',
         
         // Hero Section
@@ -190,6 +191,7 @@ const translations = {
         nav_reviews: 'Reviews',
         nav_benefits: 'Benefits',
         nav_contact: 'Contact',
+        nav_pricing: 'Pricing',
         nav_location: 'Location',
         
         // Hero Section
@@ -369,6 +371,7 @@ const translations = {
         nav_reviews: 'お客様の声',
         nav_benefits: '特典',
         nav_contact: 'お問い合わせ',
+        nav_pricing: '料金',
         nav_location: 'アクセス',
         
         // Hero Section
