@@ -290,11 +290,274 @@
             <section id="section-services" class="admin-section">
                 <div class="section-header">
                     <h2><i class="fas fa-spa"></i> 서비스 관리</h2>
-                    <p>제공하는 서비스 목록을 관리합니다</p>
+                    <p>제공하는 서비스의 제목, 설명, 아이콘을 관리합니다</p>
                 </div>
-                <div class="service-notice">
-                    <i class="fas fa-info-circle"></i>
-                    <p>서비스 수정은 translations.js 파일을 직접 편집해주세요</p>
+                
+                <div id="services-container">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>서비스 1</h3>
+                            <button type="button" class="btn-toggle" onclick="toggleService(1)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <form class="admin-form service-form" id="service-form-1">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service1-icon">아이콘 (Font Awesome)</label>
+                                    <input type="text" id="service1-icon" class="form-control" 
+                                           value="fa-user-md" placeholder="fa-spa">
+                                    <small>예: fa-spa, fa-seedling, fa-hand-sparkles</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>아이콘 미리보기</label>
+                                    <div class="icon-preview">
+                                        <i class="fas fa-user-md" id="preview-icon-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service1-title-ko">제목 (한국어)</label>
+                                    <input type="text" id="service1-title-ko" class="form-control" 
+                                           value="상담">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service1-desc-ko">설명 (한국어)</label>
+                                    <textarea id="service1-desc-ko" class="form-control" rows="2">두피 상태 정밀 진단 및 개인 맞춤형 케어 계획 수립</textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service1-title-en">제목 (English)</label>
+                                    <input type="text" id="service1-title-en" class="form-control" 
+                                           value="Consultation">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service1-desc-en">설명 (English)</label>
+                                    <textarea id="service1-desc-en" class="form-control" rows="2">Precise scalp diagnosis and personalized care plan</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>서비스 2</h3>
+                            <button type="button" class="btn-toggle" onclick="toggleService(2)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <form class="admin-form service-form collapsed" id="service-form-2">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service2-icon">아이콘 (Font Awesome)</label>
+                                    <input type="text" id="service2-icon" class="form-control" 
+                                           value="fa-spa" placeholder="fa-spa">
+                                    <small>예: fa-spa, fa-seedling, fa-hand-sparkles</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>아이콘 미리보기</label>
+                                    <div class="icon-preview">
+                                        <i class="fas fa-spa" id="preview-icon-2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service2-title-ko">제목 (한국어)</label>
+                                    <input type="text" id="service2-title-ko" class="form-control" 
+                                           value="두피 스케일링">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service2-desc-ko">설명 (한국어)</label>
+                                    <textarea id="service2-desc-ko" class="form-control" rows="2">각질 제거 및 두피 정화 관리</textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service2-title-en">제목 (English)</label>
+                                    <input type="text" id="service2-title-en" class="form-control" 
+                                           value="Scalp Scaling">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service2-desc-en">설명 (English)</label>
+                                    <textarea id="service2-desc-en" class="form-control" rows="2">Exfoliation and scalp purification</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Service 3-6 similar structure -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>서비스 3</h3>
+                            <button type="button" class="btn-toggle" onclick="toggleService(3)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <form class="admin-form service-form collapsed" id="service-form-3">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service3-icon">아이콘</label>
+                                    <input type="text" id="service3-icon" class="form-control" value="fa-wind">
+                                </div>
+                                <div class="form-group">
+                                    <label>미리보기</label>
+                                    <div class="icon-preview"><i class="fas fa-wind" id="preview-icon-3"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service3-title-ko">제목 (한국어)</label>
+                                    <input type="text" id="service3-title-ko" class="form-control" value="스팀 트리트먼트">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service3-desc-ko">설명 (한국어)</label>
+                                    <textarea id="service3-desc-ko" class="form-control" rows="2">두피 모공을 열어 흡수력 강화</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>서비스 4</h3>
+                            <button type="button" class="btn-toggle" onclick="toggleService(4)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <form class="admin-form service-form collapsed" id="service-form-4">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service4-icon">아이콘</label>
+                                    <input type="text" id="service4-icon" class="form-control" value="fa-tint">
+                                </div>
+                                <div class="form-group">
+                                    <label>미리보기</label>
+                                    <div class="icon-preview"><i class="fas fa-tint" id="preview-icon-4"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service4-title-ko">제목 (한국어)</label>
+                                    <input type="text" id="service4-title-ko" class="form-control" value="아쿠아 펀치 케어">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service4-desc-ko">설명 (한국어)</label>
+                                    <textarea id="service4-desc-ko" class="form-control" rows="2">수분 공급 및 두피 진정 관리</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>서비스 5</h3>
+                            <button type="button" class="btn-toggle" onclick="toggleService(5)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <form class="admin-form service-form collapsed" id="service-form-5">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service5-icon">아이콘</label>
+                                    <input type="text" id="service5-icon" class="form-control" value="fa-bolt">
+                                </div>
+                                <div class="form-group">
+                                    <label>미리보기</label>
+                                    <div class="icon-preview"><i class="fas fa-bolt" id="preview-icon-5"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service5-title-ko">제목 (한국어)</label>
+                                    <input type="text" id="service5-title-ko" class="form-control" value="갈바닉 케어">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service5-desc-ko">설명 (한국어)</label>
+                                    <textarea id="service5-desc-ko" class="form-control" rows="2">유효 성분 흡수 촉진 및 두피 컨디션 개선</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3>서비스 6</h3>
+                            <button type="button" class="btn-toggle" onclick="toggleService(6)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <form class="admin-form service-form collapsed" id="service-form-6">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service6-icon">아이콘</label>
+                                    <input type="text" id="service6-icon" class="form-control" value="fa-comments">
+                                </div>
+                                <div class="form-group">
+                                    <label>미리보기</label>
+                                    <div class="icon-preview"><i class="fas fa-comments" id="preview-icon-6"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service6-title-ko">제목 (한국어)</label>
+                                    <input type="text" id="service6-title-ko" class="form-control" value="1:1 맞춤 상담">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full">
+                                    <label for="service6-desc-ko">설명 (한국어)</label>
+                                    <textarea id="service6-desc-ko" class="form-control" rows="2">전문 컨설턴트와 함께하는 개인별 두피 관리 계획 수립</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-save" onclick="saveServices()">
+                        <i class="fas fa-save"></i> 모든 서비스 저장
+                    </button>
+                    <button type="button" class="btn-download" onclick="downloadServicesJSON()">
+                        <i class="fas fa-download"></i> JSON 다운로드
+                    </button>
+                </div>
+
+                <div class="service-info">
+                    <h4><i class="fas fa-lightbulb"></i> Font Awesome 아이콘 참고</h4>
+                    <div class="icon-examples">
+                        <span><i class="fas fa-spa"></i> fa-spa</span>
+                        <span><i class="fas fa-hand-sparkles"></i> fa-hand-sparkles</span>
+                        <span><i class="fas fa-seedling"></i> fa-seedling</span>
+                        <span><i class="fas fa-leaf"></i> fa-leaf</span>
+                        <span><i class="fas fa-water"></i> fa-water</span>
+                        <span><i class="fas fa-wind"></i> fa-wind</span>
+                        <span><i class="fas fa-bolt"></i> fa-bolt</span>
+                        <span><i class="fas fa-heart"></i> fa-heart</span>
+                        <span><i class="fas fa-star"></i> fa-star</span>
+                        <span><i class="fas fa-magic"></i> fa-magic</span>
+                    </div>
+                    <p class="icon-link">
+                        더 많은 아이콘: <a href="https://fontawesome.com/icons" target="_blank" rel="noopener">fontawesome.com/icons</a>
+                    </p>
                 </div>
             </section>
 

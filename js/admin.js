@@ -1,8 +1,8 @@
 // Admin Panel JavaScript
-// 기본 관리자 계정 (실제 운영시 반드시 변경하세요!)
+// 기본 관리자 계정
 const ADMIN_CREDENTIALS = {
-    username: 'admin',
-    password: 'moclock2024!' // 반드시 변경하세요!
+    username: 'moclock',
+    password: '1234'
 };
 
 // LocalStorage Keys
@@ -362,6 +362,198 @@ function showUpdateInstructions(section) {
         }
     }, 500);
 }
+
+// Toggle Service Form
+function toggleService(serviceNumber) {
+    const form = document.getElementById(`service-form-${serviceNumber}`);
+    const button = form.previousElementSibling.querySelector('.btn-toggle i');
+    
+    if (form.classList.contains('collapsed')) {
+        form.classList.remove('collapsed');
+        button.classList.remove('fa-chevron-down');
+        button.classList.add('fa-chevron-up');
+    } else {
+        form.classList.add('collapsed');
+        button.classList.remove('fa-chevron-up');
+        button.classList.add('fa-chevron-down');
+    }
+}
+
+// Update Icon Preview
+document.addEventListener('DOMContentLoaded', function() {
+    // Icon preview listeners
+    for (let i = 1; i <= 6; i++) {
+        const iconInput = document.getElementById(`service${i}-icon`);
+        if (iconInput) {
+            iconInput.addEventListener('input', function() {
+                updateIconPreview(i, this.value);
+            });
+        }
+    }
+});
+
+function updateIconPreview(serviceNumber, iconClass) {
+    const preview = document.getElementById(`preview-icon-${serviceNumber}`);
+    if (preview) {
+        // Remove all fa- classes
+        preview.className = 'fas';
+        // Add new icon class
+        if (iconClass && !iconClass.startsWith('fa-')) {
+            iconClass = 'fa-' + iconClass;
+        }
+        preview.classList.add(iconClass.replace('fa-', 'fa-'));
+    }
+}
+
+// Save Services
+function saveServices() {
+    const services = [];
+    
+    for (let i = 1; i <= 6; i++) {
+        const icon = document.getElementById(`service${i}-icon`)?.value || '';
+        const titleKo = document.getElementById(`service${i}-title-ko`)?.value || '';
+        const descKo = document.getElementById(`service${i}-desc-ko`)?.value || '';
+        const titleEn = document.getElementById(`service${i}-title-en`)?.value || '';
+        const descEn = document.getElementById(`service${i}-desc-en`)?.value || '';
+        
+        services.push({
+            number: i,
+            icon: icon,
+            ko: {
+                title: titleKo,
+                description: descKo
+            },
+            en: {
+                title: titleEn,
+                description: descEn
+            }
+        });
+    }
+    
+    // Save to LocalStorage
+    localStorage.setItem('moclock_services', JSON.stringify(services));
+    
+    showNotification('서비스 정보가 저장되었습니다.', 'success');
+    
+    // Show update instructions
+    setTimeout(() => {
+        if (confirm('translations.js 파일을 업데이트해야 합니다.\nJSON 파일을 다운로드하시겠습니까?')) {
+            downloadServicesJSON();
+        }
+    }, 500);
+}
+
+// Download Services JSON
+function downloadServicesJSON() {
+    const services = [];
+    
+    for (let i = 1; i <= 6; i++) {
+        const icon = document.getElementById(`service${i}-icon`)?.value || '';
+        const titleKo = document.getElementById(`service${i}-title-ko`)?.value || '';
+        const descKo = document.getElementById(`service${i}-desc-ko`)?.value || '';
+        const titleEn = document.getElementById(`service${i}-title-en`)?.value || '';
+        const descEn = document.getElementById(`service${i}-desc-en`)?.value || '';
+        
+        services.push({
+            number: i,
+            icon: icon,
+            translations: {
+                ko: {
+                    title: titleKo,
+                    description: descKo,
+                    // translations.js format
+                    key_title: `service${i}_title`,
+                    key_desc: `service${i}_desc`
+                },
+                en: {
+                    title: titleEn,
+                    description: descEn,
+                    key_title: `service${i}_title`,
+                    key_desc: `service${i}_desc`
+                }
+            }
+        });
+    }
+    
+    const exportData = {
+        timestamp: new Date().toISOString(),
+        services: services,
+        instructions: {
+            ko: '이 JSON 파일의 내용을 translations.js 파일에 적용해주세요.',
+            en: 'Apply this JSON content to your translations.js file.',
+            example: {
+                ko: {
+                    service1_title: services[0].translations.ko.title,
+                    service1_desc: services[0].translations.ko.description
+                },
+                en: {
+                    service1_title: services[0].translations.en.title,
+                    service1_desc: services[0].translations.en.description
+                }
+            }
+        }
+    };
+    
+    const dataStr = JSON.stringify(exportData, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+    const url = URL.createObjectURL(dataBlob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `moclock-services-${new Date().toISOString().split('T')[0]}.json`;
+    link.click();
+    
+    URL.revokeObjectURL(url);
+    showNotification('서비스 설정 파일이 다운로드되었습니다.', 'success');
+}
+
+// Load Saved Services
+function loadSavedServices() {
+    const savedServices = localStorage.getItem('moclock_services');
+    
+    if (savedServices) {
+        try {
+            const services = JSON.parse(savedServices);
+            
+            services.forEach(service => {
+                const i = service.number;
+                
+                if (document.getElementById(`service${i}-icon`)) {
+                    document.getElementById(`service${i}-icon`).value = service.icon || '';
+                    updateIconPreview(i, service.icon);
+                }
+                
+                if (service.ko) {
+                    if (document.getElementById(`service${i}-title-ko`)) {
+                        document.getElementById(`service${i}-title-ko`).value = service.ko.title || '';
+                    }
+                    if (document.getElementById(`service${i}-desc-ko`)) {
+                        document.getElementById(`service${i}-desc-ko`).value = service.ko.description || '';
+                    }
+                }
+                
+                if (service.en) {
+                    if (document.getElementById(`service${i}-title-en`)) {
+                        document.getElementById(`service${i}-title-en`).value = service.en.title || '';
+                    }
+                    if (document.getElementById(`service${i}-desc-en`)) {
+                        document.getElementById(`service${i}-desc-en`).value = service.en.description || '';
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Failed to load services:', error);
+        }
+    }
+}
+
+// Update Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    checkLoginStatus();
+    initializeEventListeners();
+    loadSavedConfig();
+    loadSavedServices(); // Load saved services
+});
 
 // CSS Animations
 const style = document.createElement('style');
