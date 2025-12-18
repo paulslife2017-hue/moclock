@@ -290,7 +290,72 @@
             <section id="section-services" class="admin-section">
                 <div class="section-header">
                     <h2><i class="fas fa-spa"></i> 서비스 관리</h2>
-                    <p>제공하는 서비스의 제목, 설명, 아이콘을 관리합니다</p>
+                    <p>서비스 섹션의 제목, 설명, 개별 서비스를 관리합니다</p>
+                </div>
+
+                <!-- Section Header Settings -->
+                <div class="section-settings-card">
+                    <div class="settings-header">
+                        <h3><i class="fas fa-heading"></i> 서비스 섹션 헤더</h3>
+                    </div>
+                    <form class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-tag">태그 (작은 제목)</label>
+                                <input type="text" id="services-tag" class="form-control" 
+                                       value="OUR SERVICES" placeholder="OUR SERVICES">
+                                <small>예: OUR SERVICES, 서비스 소개</small>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-title-ko">메인 제목 (한국어)</label>
+                                <input type="text" id="services-title-ko" class="form-control" 
+                                       value="맞춤형 두피 케어 프로그램">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-title-en">메인 제목 (English)</label>
+                                <input type="text" id="services-title-en" class="form-control" 
+                                       value="Customized Scalp Care Program">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-title-ja">メインタイトル (日本語)</label>
+                                <input type="text" id="services-title-ja" class="form-control" 
+                                       value="カスタマイズ頭皮ケアプログラム">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-desc-ko">설명 (한국어)</label>
+                                <textarea id="services-desc-ko" class="form-control" rows="2">개인의 두피 상태를 정밀하게 분석하여 최적화된 케어를 제공합니다</textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-desc-en">설명 (English)</label>
+                                <textarea id="services-desc-en" class="form-control" rows="2">We provide optimized care by precisely analyzing your scalp condition</textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="services-desc-ja">説明 (日本語)</label>
+                                <textarea id="services-desc-ja" class="form-control" rows="2">個人の頭皮状態を精密に分析し、最適化されたケアを提供します</textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-save" onclick="saveSectionHeader()">
+                                <i class="fas fa-save"></i> 헤더 저장
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="section-divider">
+                    <h3><i class="fas fa-list"></i> 개별 서비스 (6개)</h3>
                 </div>
                 
                 <div id="services-container">

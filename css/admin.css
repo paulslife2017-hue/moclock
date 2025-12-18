@@ -461,6 +461,57 @@ select.form-control {
     margin-bottom: 16px;
 }
 
+/* Section Settings Card */
+.section-settings-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #bae6fd;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(44, 95, 79, 0.08);
+}
+
+.settings-header {
+    padding: 20px 24px;
+    background: var(--primary-color);
+    color: white;
+}
+
+.settings-header h3 {
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings-header i {
+    font-size: 20px;
+}
+
+.section-settings-card .admin-form {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Section Divider */
+.section-divider {
+    margin: 40px 0 24px 0;
+    padding: 16px 20px;
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.section-divider h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* Service Cards */
 #services-container {
     display: flex;

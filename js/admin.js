@@ -405,6 +405,35 @@ function updateIconPreview(serviceNumber, iconClass) {
     }
 }
 
+// Save Section Header
+function saveSectionHeader() {
+    const header = {
+        tag: document.getElementById('services-tag')?.value || '',
+        title: {
+            ko: document.getElementById('services-title-ko')?.value || '',
+            en: document.getElementById('services-title-en')?.value || '',
+            ja: document.getElementById('services-title-ja')?.value || ''
+        },
+        description: {
+            ko: document.getElementById('services-desc-ko')?.value || '',
+            en: document.getElementById('services-desc-en')?.value || '',
+            ja: document.getElementById('services-desc-ja')?.value || ''
+        }
+    };
+    
+    // Save to LocalStorage
+    localStorage.setItem('moclock_services_header', JSON.stringify(header));
+    
+    showNotification('서비스 섹션 헤더가 저장되었습니다.', 'success');
+    
+    // Show update instructions
+    setTimeout(() => {
+        if (confirm('translations.js 파일을 업데이트해야 합니다.\nJSON 파일을 다운로드하시겠습니까?')) {
+            downloadServicesJSON();
+        }
+    }, 500);
+}
+
 // Save Services
 function saveServices() {
     const services = [];
@@ -433,7 +462,10 @@ function saveServices() {
     // Save to LocalStorage
     localStorage.setItem('moclock_services', JSON.stringify(services));
     
-    showNotification('서비스 정보가 저장되었습니다.', 'success');
+    // Also save header
+    saveSectionHeader();
+    
+    showNotification('모든 서비스 정보가 저장되었습니다.', 'success');
     
     // Show update instructions
     setTimeout(() => {
@@ -445,6 +477,22 @@ function saveServices() {
 
 // Download Services JSON
 function downloadServicesJSON() {
+    // Get header data
+    const header = {
+        tag: document.getElementById('services-tag')?.value || '',
+        title: {
+            ko: document.getElementById('services-title-ko')?.value || '',
+            en: document.getElementById('services-title-en')?.value || '',
+            ja: document.getElementById('services-title-ja')?.value || ''
+        },
+        description: {
+            ko: document.getElementById('services-desc-ko')?.value || '',
+            en: document.getElementById('services-desc-en')?.value || '',
+            ja: document.getElementById('services-desc-ja')?.value || ''
+        }
+    };
+
+    // Get services data
     const services = [];
     
     for (let i = 1; i <= 6; i++) {
@@ -461,7 +509,6 @@ function downloadServicesJSON() {
                 ko: {
                     title: titleKo,
                     description: descKo,
-                    // translations.js format
                     key_title: `service${i}_title`,
                     key_desc: `service${i}_desc`
                 },
@@ -477,19 +524,47 @@ function downloadServicesJSON() {
     
     const exportData = {
         timestamp: new Date().toISOString(),
+        section_header: {
+            services_tag: header.tag,
+            translations: {
+                ko: {
+                    services_title: header.title.ko,
+                    services_desc: header.description.ko
+                },
+                en: {
+                    services_title: header.title.en,
+                    services_desc: header.description.en
+                },
+                ja: {
+                    services_title: header.title.ja,
+                    services_desc: header.description.ja
+                }
+            }
+        },
         services: services,
         instructions: {
             ko: '이 JSON 파일의 내용을 translations.js 파일에 적용해주세요.',
             en: 'Apply this JSON content to your translations.js file.',
-            example: {
-                ko: {
-                    service1_title: services[0].translations.ko.title,
-                    service1_desc: services[0].translations.ko.description
-                },
-                en: {
-                    service1_title: services[0].translations.en.title,
-                    service1_desc: services[0].translations.en.description
-                }
+            steps: [
+                '1. translations.js 파일을 엽니다',
+                '2. services_tag, services_title, services_desc 값을 업데이트합니다',
+                '3. service1_title ~ service6_title 값을 업데이트합니다',
+                '4. service1_desc ~ service6_desc 값을 업데이트합니다',
+                '5. 변경사항을 저장하고 Git에 커밋합니다'
+            ],
+            example_ko: {
+                services_tag: header.tag,
+                services_title: header.title.ko,
+                services_desc: header.description.ko,
+                service1_title: services[0].translations.ko.title,
+                service1_desc: services[0].translations.ko.description
+            },
+            example_en: {
+                services_tag: header.tag,
+                services_title: header.title.en,
+                services_desc: header.description.en,
+                service1_title: services[0].translations.en.title,
+                service1_desc: services[0].translations.en.description
             }
         }
     };
@@ -509,6 +584,43 @@ function downloadServicesJSON() {
 
 // Load Saved Services
 function loadSavedServices() {
+    // Load header
+    const savedHeader = localStorage.getItem('moclock_services_header');
+    if (savedHeader) {
+        try {
+            const header = JSON.parse(savedHeader);
+            
+            if (document.getElementById('services-tag')) {
+                document.getElementById('services-tag').value = header.tag || '';
+            }
+            if (header.title) {
+                if (document.getElementById('services-title-ko')) {
+                    document.getElementById('services-title-ko').value = header.title.ko || '';
+                }
+                if (document.getElementById('services-title-en')) {
+                    document.getElementById('services-title-en').value = header.title.en || '';
+                }
+                if (document.getElementById('services-title-ja')) {
+                    document.getElementById('services-title-ja').value = header.title.ja || '';
+                }
+            }
+            if (header.description) {
+                if (document.getElementById('services-desc-ko')) {
+                    document.getElementById('services-desc-ko').value = header.description.ko || '';
+                }
+                if (document.getElementById('services-desc-en')) {
+                    document.getElementById('services-desc-en').value = header.description.en || '';
+                }
+                if (document.getElementById('services-desc-ja')) {
+                    document.getElementById('services-desc-ja').value = header.description.ja || '';
+                }
+            }
+        } catch (error) {
+            console.error('Failed to load header:', error);
+        }
+    }
+
+    // Load services
     const savedServices = localStorage.getItem('moclock_services');
     
     if (savedServices) {
