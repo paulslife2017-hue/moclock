@@ -32,11 +32,13 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap locations
-Sitemap: https://moclock.vercel.app/sitemap.xml
+Sitemap: https://www.scalptreatmentgangnam.co.kr/sitemap.xml
 
-# Block test pages (if any)
+# Block admin pages and test pages
+Disallow: /admin.html
+Disallow: /admin/
 Disallow: /test-images.html
 Disallow: /*?test=*
 
 # Host (preferred domain)
-Host: https://moclock.vercel.app
+Host: https://www.scalptreatmentgangnam.co.kr

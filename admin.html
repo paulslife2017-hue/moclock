@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>모클락 관리자 페이지 | Moclock Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <i class="fas fa-user-shield"></i>
+                <h1>모클락 관리자</h1>
+                <p>Moclock Admin Panel</p>
+            </div>
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i> 아이디
+                    </label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i> 비밀번호
+                    </label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember-me">
+                        <span>로그인 상태 유지</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> 로그인
+                </button>
+                <div id="login-error" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="admin-container" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <h1><i class="fas fa-tachometer-alt"></i> 모클락 관리자</h1>
+                <span class="header-subtitle">콘텐츠 관리 시스템</span>
+            </div>
+            <div class="header-right">
+                <span class="user-info"><i class="fas fa-user"></i> <span id="current-user">관리자</span></span>
+                <button id="btn-logout" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> 로그아웃
+                </button>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <a href="#section-seo" class="nav-item active" data-section="seo">
+                    <i class="fas fa-search"></i> SEO 설정
+                </a>
+                <a href="#section-location" class="nav-item" data-section="location">
+                    <i class="fas fa-map-marker-alt"></i> 위치 정보
+                </a>
+                <a href="#section-contact" class="nav-item" data-section="contact">
+                    <i class="fas fa-phone"></i> 연락처 정보
+                </a>
+                <a href="#section-hours" class="nav-item" data-section="hours">
+                    <i class="fas fa-clock"></i> 영업시간
+                </a>
+                <a href="#section-services" class="nav-item" data-section="services">
+                    <i class="fas fa-spa"></i> 서비스 관리
+                </a>
+                <a href="#section-social" class="nav-item" data-section="social">
+                    <i class="fas fa-share-alt"></i> 소셜 미디어
+                </a>
+                <a href="#section-preview" class="nav-item" data-section="preview">
+                    <i class="fas fa-eye"></i> 미리보기
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- SEO Settings -->
+            <section id="section-seo" class="admin-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-search"></i> SEO 설정</h2>
+                    <p>검색엔진 최적화를 위한 메타 정보를 관리합니다</p>
+                </div>
+                <form class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="meta-title">페이지 제목 (Title)</label>
+                            <input type="text" id="meta-title" class="form-control" 
+                                   placeholder="강남헤드스파 | Gangnam Head Spa">
+                            <small>권장: 60자 이내</small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="meta-description">메타 설명 (Description)</label>
+                            <textarea id="meta-description" class="form-control" rows="3"
+                                      placeholder="논현역 7호선 도보 3분 | 두피케어·탈모관리 전문"></textarea>
+                            <small>권장: 155자 이내</small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="meta-keywords">키워드 (Keywords)</label>
+                            <input type="text" id="meta-keywords" class="form-control"
+                                   placeholder="강남헤드스파, 논현역헤드스파, gangnam head spa">
+                            <small>쉼표(,)로 구분</small>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-save" onclick="saveSEO()">
+                            <i class="fas fa-save"></i> 저장
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Location Info -->
+            <section id="section-location" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-map-marker-alt"></i> 위치 정보</h2>
+                    <p>사업장 주소 및 지도 정보를 관리합니다</p>
+                </div>
+                <form class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="address">주소</label>
+                            <input type="text" id="address" class="form-control"
+                                   value="서울시 강남구 강남대로 520">
+                        </div>
+                        <div class="form-group">
+                            <label for="address-detail">상세 주소</label>
+                            <input type="text" id="address-detail" class="form-control"
+                                   value="할리스커피 건물 2층">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="subway-line">지하철 노선</label>
+                            <select id="subway-line" class="form-control">
+                                <option value="1">1호선</option>
+                                <option value="2">2호선</option>
+                                <option value="3">3호선</option>
+                                <option value="7" selected>7호선</option>
+                                <option value="9">9호선</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subway-station">역 이름</label>
+                            <input type="text" id="subway-station" class="form-control"
+                                   value="논현역">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="exit-number">출구 번호</label>
+                            <input type="number" id="exit-number" class="form-control"
+                                   value="2" min="1" max="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="walk-time">도보 시간 (분)</label>
+                            <input type="number" id="walk-time" class="form-control"
+                                   value="3" min="1" max="30">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="latitude">위도 (Latitude)</label>
+                            <input type="text" id="latitude" class="form-control"
+                                   value="37.5112" pattern="[0-9.]+">
+                        </div>
+                        <div class="form-group">
+                            <label for="longitude">경도 (Longitude)</label>
+                            <input type="text" id="longitude" class="form-control"
+                                   value="127.0217" pattern="[0-9.]+">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-save" onclick="saveLocation()">
+                            <i class="fas fa-save"></i> 저장
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Contact Info -->
+            <section id="section-contact" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-phone"></i> 연락처 정보</h2>
+                    <p>전화번호, 이메일 등 연락처를 관리합니다</p>
+                </div>
+                <form class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">전화번호</label>
+                            <input type="tel" id="phone" class="form-control"
+                                   value="010-5749-5734">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-intl">국제 전화번호</label>
+                            <input type="tel" id="phone-intl" class="form-control"
+                                   value="+82-10-5749-5734">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="email">이메일</label>
+                            <input type="email" id="email" class="form-control"
+                                   value="info@moclock.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="kakao">카카오톡 ID</label>
+                            <input type="text" id="kakao" class="form-control"
+                                   placeholder="moclock_official">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-save" onclick="saveContact()">
+                            <i class="fas fa-save"></i> 저장
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Business Hours -->
+            <section id="section-hours" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clock"></i> 영업시간</h2>
+                    <p>매장 운영 시간을 관리합니다</p>
+                </div>
+                <form class="admin-form">
+                    <div class="hours-group">
+                        <h3>평일</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weekday-open">오픈</label>
+                                <input type="time" id="weekday-open" class="form-control" value="10:00">
+                            </div>
+                            <div class="form-group">
+                                <label for="weekday-close">마감</label>
+                                <input type="time" id="weekday-close" class="form-control" value="20:00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hours-group">
+                        <h3>주말</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weekend-open">오픈</label>
+                                <input type="time" id="weekend-open" class="form-control" value="10:00">
+                            </div>
+                            <div class="form-group">
+                                <label for="weekend-close">마감</label>
+                                <input type="time" id="weekend-close" class="form-control" value="18:00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="holiday-notice">휴무일 안내</label>
+                            <input type="text" id="holiday-notice" class="form-control"
+                                   placeholder="매주 월요일 정기 휴무">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-save" onclick="saveHours()">
+                            <i class="fas fa-save"></i> 저장
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Services -->
+            <section id="section-services" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-spa"></i> 서비스 관리</h2>
+                    <p>제공하는 서비스 목록을 관리합니다</p>
+                </div>
+                <div class="service-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p>서비스 수정은 translations.js 파일을 직접 편집해주세요</p>
+                </div>
+            </section>
+
+            <!-- Social Media -->
+            <section id="section-social" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-share-alt"></i> 소셜 미디어</h2>
+                    <p>소셜 미디어 링크를 관리합니다</p>
+                </div>
+                <form class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="instagram"><i class="fab fa-instagram"></i> Instagram</label>
+                            <input type="url" id="instagram" class="form-control"
+                                   placeholder="https://instagram.com/moclock_gangnam">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="facebook"><i class="fab fa-facebook"></i> Facebook</label>
+                            <input type="url" id="facebook" class="form-control"
+                                   placeholder="https://facebook.com/moclock">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="naver"><i class="fas fa-map-marked-alt"></i> Naver Place</label>
+                            <input type="url" id="naver" class="form-control"
+                                   placeholder="https://naver.me/moclock">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="google-maps"><i class="fas fa-map-marker-alt"></i> Google Maps</label>
+                            <input type="url" id="google-maps" class="form-control"
+                                   value="https://www.google.com/maps/place/Moclock/">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-save" onclick="saveSocial()">
+                            <i class="fas fa-save"></i> 저장
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Preview -->
+            <section id="section-preview" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-eye"></i> 미리보기</h2>
+                    <p>변경사항을 적용하기 전 미리 확인합니다</p>
+                </div>
+                <div class="preview-actions">
+                    <a href="/" target="_blank" class="btn-preview">
+                        <i class="fas fa-external-link-alt"></i> 메인 페이지 열기
+                    </a>
+                    <button type="button" class="btn-download" onclick="downloadConfig()">
+                        <i class="fas fa-download"></i> 설정 다운로드
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
