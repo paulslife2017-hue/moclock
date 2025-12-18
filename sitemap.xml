@@ -5,65 +5,65 @@
     
     <!-- Main Page - Korean -->
     <url>
-        <loc>https://moclock.vercel.app/</loc>
-        <lastmod>2025-12-13</lastmod>
+        <loc>https://www.scalptreatmentgangnam.co.kr/</loc>
+        <lastmod>2024-12-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://moclock.vercel.app/?lang=ko"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://moclock.vercel.app/?lang=en"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://moclock.vercel.app/?lang=ja"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://moclock.vercel.app/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://www.scalptreatmentgangnam.co.kr/?lang=ko"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.scalptreatmentgangnam.co.kr/?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.scalptreatmentgangnam.co.kr/?lang=ja"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.scalptreatmentgangnam.co.kr/"/>
         <image:image>
-            <image:loc>https://moclock.vercel.app/images/reception.jpg</image:loc>
+            <image:loc>https://www.scalptreatmentgangnam.co.kr/images/reception.jpg</image:loc>
             <image:title>모클락 강남헤드스파 리셉션</image:title>
             <image:caption>강남역 도보 1분, 프리미엄 헤드스파 모클락</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://moclock.vercel.app/images/salon.jpg</image:loc>
+            <image:loc>https://www.scalptreatmentgangnam.co.kr/images/salon.jpg</image:loc>
             <image:title>프리미엄 살롱 공간</image:title>
         </image:image>
         <image:image>
-            <image:loc>https://moclock.vercel.app/images/treatment.jpg</image:loc>
+            <image:loc>https://www.scalptreatmentgangnam.co.kr/images/treatment.jpg</image:loc>
             <image:title>두피 트리트먼트 서비스</image:title>
         </image:image>
     </url>
     
     <!-- About Section -->
     <url>
-        <loc>https://moclock.vercel.app/#about</loc>
-        <lastmod>2025-12-13</lastmod>
+        <loc>https://www.scalptreatmentgangnam.co.kr/#about</loc>
+        <lastmod>2024-12-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Services Section -->
     <url>
-        <loc>https://moclock.vercel.app/#services</loc>
-        <lastmod>2025-12-13</lastmod>
+        <loc>https://www.scalptreatmentgangnam.co.kr/#services</loc>
+        <lastmod>2024-12-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Reviews Section -->
     <url>
-        <loc>https://moclock.vercel.app/#reviews</loc>
-        <lastmod>2025-12-13</lastmod>
+        <loc>https://www.scalptreatmentgangnam.co.kr/#reviews</loc>
+        <lastmod>2024-12-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Gallery Section -->
     <url>
-        <loc>https://moclock.vercel.app/#gallery</loc>
-        <lastmod>2025-12-13</lastmod>
+        <loc>https://www.scalptreatmentgangnam.co.kr/#gallery</loc>
+        <lastmod>2024-12-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Location Section -->
     <url>
-        <loc>https://moclock.vercel.app/#location</loc>
-        <lastmod>2025-12-13</lastmod>
+        <loc>https://www.scalptreatmentgangnam.co.kr/#location</loc>
+        <lastmod>2024-12-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
