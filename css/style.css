@@ -1319,6 +1319,26 @@ section {
     opacity: 0.6;
 }
 
+.footer-bottom p {
+    margin: 0.5rem 0;
+}
+
+.footer-credits {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.footer-credits a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.footer-credits a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 968px) {
     .navbar .container {
