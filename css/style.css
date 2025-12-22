@@ -1329,14 +1329,20 @@ section {
 }
 
 .footer-credits a {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--accent-color);
+    /* Golden color - more visible */
     text-decoration: none;
-    transition: var(--transition-fast);
+    transition: var(--transition-normal);
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .footer-credits a:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--accent-light);
+    /* Lighter golden on hover */
     text-decoration: underline;
+    opacity: 1;
+    transform: translateY(-1px);
 }
 
 /* ===== Responsive Design ===== */
