@@ -1,3 +1,26 @@
+// ===== Dynamic Canonical URL & OG URL (SEO Fix) =====
+(function() {
+    // Get current URL without query parameters for canonical
+    const currentURL = window.location.origin + window.location.pathname;
+    // Remove trailing slash if exists
+    const cleanURL = currentURL.replace(/\/$/, '');
+    
+    // Update canonical link
+    const canonicalLink = document.getElementById('canonical-link');
+    if (canonicalLink) {
+        canonicalLink.setAttribute('href', cleanURL);
+    }
+    
+    // Update OG URL meta tag
+    const ogURL = document.getElementById('og-url');
+    if (ogURL) {
+        ogURL.setAttribute('content', cleanURL);
+    }
+    
+    // Log for debugging (remove in production if needed)
+    console.log('✅ SEO Tags Updated:', cleanURL);
+})();
+
 // ===== Mobile Menu Toggle =====
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
